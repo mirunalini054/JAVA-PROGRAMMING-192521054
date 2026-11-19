@@ -1,27 +1,5 @@
-# Assignment 5 – Java CO5
+# Task 12: Day-4 Design Challenge
 
-## Requirements
-- JDK 17 or later (JDK 11+ should also work for the source files).
-- VS Code with Extension Pack for Java, or terminal.
+E-bikes: introduce ElectricBike extends TwoWheeler implements Chargeable and configure new slot compatibility; MODIFY vehicle taxonomy and slot policy, retain facility abstraction. Peak delivery vans: add DeliveryVan extends Vehicle and a PricingPolicy strategy interface receiving arrival/exit timestamps, with an explicit peak interval; REDESIGN price calculation responsibility rather than hard-code conditional branches. One-day passes: refactor Pass into a validity interval with start/end dates and PassType; MODIFY pass classes and fee waiver logic. Five floors: current ParkingFacility(5) works with 10 slots/floor; RETAIN the list-based facility (performance is acceptable for a campus scale). Add persistence, authentication, audit logs, thread-safe allocation, EV charge session tracking, accessibility spots and security policies before production. Decisions emphasize the Open-Closed Principle and reduced coupling.
 
-## Compile
-Open this folder in VS Code. In the terminal:
-
-```powershell
-cd src
-javac PassStore.java
-java PassStore
-javac LineCounter.java
-java LineCounter
-javac PassStoreBenchmark.java
-java PassStoreBenchmark
-```
-
-The programs create temporary test data or files in the current working directory and print results. Run them locally and capture screenshots for your report.
-
-## Files
-- `PassStore.java`: add, find, list-by-route; malformed lines are skipped.
-- `LineCounter.java`: compares byte-at-a-time and buffered line counting for 1 MB, 10 MB and 50 MB files.
-- `PassStoreBenchmark.java`: measures sequential ID lookup as the number of records grows.
-
-Replace the cover-page placeholders in the Word report. Fill timing tables using your own machine's output; no timings are fabricated.
+See `../src/` for the runnable implementation and `../tests/` for validation.
